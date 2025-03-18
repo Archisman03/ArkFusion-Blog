@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Client/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1742272946387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1742272946387,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react'\n\nfunction App() {\n  const [count, setCount] = useState(0)\n\n  return (\n    <>\n      <div class='bg-slate-800 text-white'>\n      </div>\n    </>\n  )\n}\n\nexport default App\n"
+        }
+    ]
+}
