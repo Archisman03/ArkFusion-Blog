@@ -1,0 +1,24 @@
+{
+  "name": "arkfusion-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Archisman03/ArkFusion-Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Archisman03/ArkFusion-Blog/issues"
+  },
+  "homepage": "https://github.com/Archisman03/ArkFusion-Blog#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

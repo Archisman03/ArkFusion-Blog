@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Client/vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1742295004791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742312567499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n-// https://vite.dev/config/\n+import tailwindcss from '@tailwindcss/vite'\n export default defineConfig({\n-  plugins: [react()],\n+  plugins: [react(),\n+    tailwindcss()\n+  ],\n })\n"
+                }
+            ],
+            "date": 1742295004791,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react-swc'\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react()],\n})\n"
+        }
+    ]
+}

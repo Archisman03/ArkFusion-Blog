@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Client/src/Pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1742277555517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1742277555517,
+            "name": "Commit-0",
+            "content": "export function Home(){\r\n    return<div>\r\n        Home\r\n    </div>\r\n}"
+        }
+    ]
+}

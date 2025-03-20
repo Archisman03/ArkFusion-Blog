@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Client/src/Pages/Projects.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1742277356185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742277628618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-import {BrowserRouter, Routes, Route} from 'react-router-dom'\n\\ No newline at end of file\n+export function Projects(){\r\n+    return<div>\r\n+        Projects\r\n+    </div>\r\n+}\r\n+\r\n"
+                }
+            ],
+            "date": 1742277356185,
+            "name": "Commit-0",
+            "content": "import {BrowserRouter, Routes, Route} from 'react-router-dom'"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+ArkFusion 🌐
+ssh-keygen -t ed25519 -C "archismangoswami2004@gmail.com"
+
+index: This makes the route the default route for its parent <Route>

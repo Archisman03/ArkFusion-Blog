@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Client/src/Pages/About.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1742277673501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1742277673501,
+            "name": "Commit-0",
+            "content": "export function About(){\r\n    return<div>\r\n        About\r\n    </div>\r\n}"
+        }
+    ]
+}

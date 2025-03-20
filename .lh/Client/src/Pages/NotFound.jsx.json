@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Client/src/Pages/NotFound.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1742278106657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742278160779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <p className=\"mt-4 text-gray-400\">\r\n         The page you are looking for doesn’t exist.\r\n       </p>\r\n       <Link\r\n-        to=\"/\"\r\n+        to='/'\r\n         className=\"mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600 transition\"\r\n       >\r\n         Go Back Home\r\n       </Link>\r\n"
+                },
+                {
+                    "date": 1742278182606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n       <h2 className=\"text-3xl mt-2\">Oops! Page Not Found</h2>\r\n       <p className=\"mt-4 text-gray-400\">\r\n         The page you are looking for doesn’t exist.\r\n       </p>\r\n+      {/* This link is for the button to go back to Home */}\r\n       <Link\r\n         to='/'\r\n         className=\"mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600 transition\"\r\n       >\r\n"
+                }
+            ],
+            "date": 1742278106657,
+            "name": "Commit-0",
+            "content": "import { Link } from \"react-router-dom\";\r\n\r\nexport function NotFound() {\r\n  return (\r\n    <div className=\"flex flex-col items-center justify-center h-screen bg-gray-900 text-white\">\r\n      <h1 className=\"text-6xl font-bold text-red-500\">404</h1>\r\n      <h2 className=\"text-3xl mt-2\">Oops! Page Not Found</h2>\r\n      <p className=\"mt-4 text-gray-400\">\r\n        The page you are looking for doesn’t exist.\r\n      </p>\r\n      <Link\r\n        to=\"/\"\r\n        className=\"mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600 transition\"\r\n      >\r\n        Go Back Home\r\n      </Link>\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

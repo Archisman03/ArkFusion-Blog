@@ -1,2 +1,0 @@
-ArkFusion 🌐
-ssh-keygen -t ed25519 -C "archismangoswami2004@gmail.com"

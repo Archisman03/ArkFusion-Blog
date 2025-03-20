@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Client/src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1742312580951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742313226606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+@import \"tailwindcss\";\r\n+@import \"flowbite/src/themes/default\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742313253370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n @import \"tailwindcss\";\r\n-@import \"flowbite/src/themes/default\";\n\\ No newline at end of file\n+@import \"flowbite/src/themes/default\";\r\n+@plugin \"flowbite/plugin\";\r\n+@source \"../node_modules/flowbite\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742318197601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,1 @@\n-@import \"tailwindcss\";\r\n-@import \"flowbite/src/themes/default\";\r\n-@plugin \"flowbite/plugin\";\r\n-@source \"../node_modules/flowbite\";\n\\ No newline at end of file\n+@import \"tailwindcss\";\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1742312580951,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

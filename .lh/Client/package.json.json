@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Client/package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1742295949707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742312411466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,31 +3,32 @@\n   \"private\": true,\n   \"version\": \"0.0.0\",\n   \"type\": \"module\",\n   \"scripts\": {\n-  \"dev\": \"concurrently \\\"vite\\\" \\\"npm run tailwind:watch\\\"\",\n-  \"build\": \"vite build\",\n-  \"lint\": \"eslint .\",\n-  \"preview\": \"vite preview\",\n-  \"tailwind:watch\": \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\"\n+    \"dev\": \"vite\",\n+    \"build\": \"vite build\",\n+    \"lint\": \"eslint .\",\n+    \"preview\": \"vite preview\",\n+    \"tailwind:watch\": \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\"\n   },\n   \"dependencies\": {\n     \"flowbite-react\": \"^0.10.2\",\n     \"react\": \"^19.0.0\",\n     \"react-dom\": \"^19.0.0\",\n+    \"react-icon\": \"^1.0.0\",\n     \"react-router-dom\": \"^7.3.0\"\n   },\n   \"devDependencies\": {\n     \"@eslint/js\": \"^9.21.0\",\n     \"@types/react\": \"^19.0.10\",\n     \"@types/react-dom\": \"^19.0.4\",\n     \"@vitejs/plugin-react-swc\": \"^3.8.0\",\n     \"autoprefixer\": \"^10.4.21\",\n+    \"concurrently\": \"^9.1.2\",\n     \"eslint\": \"^9.21.0\",\n     \"eslint-plugin-react-hooks\": \"^5.1.0\",\n     \"eslint-plugin-react-refresh\": \"^0.4.19\",\n     \"globals\": \"^15.15.0\",\n     \"postcss\": \"^8.5.3\",\n-    \"tailwindcss\": \"^3.4.17\",\n     \"vite\": \"^6.2.0\"\n   }\n }\n"
+                },
+                {
+                    "date": 1742312426776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n   \"scripts\": {\n     \"dev\": \"vite\",\n     \"build\": \"vite build\",\n     \"lint\": \"eslint .\",\n-    \"preview\": \"vite preview\",\n-    \"tailwind:watch\": \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\"\n+    \"preview\": \"vite preview\"\n   },\n   \"dependencies\": {\n     \"flowbite-react\": \"^0.10.2\",\n     \"react\": \"^19.0.0\",\n"
+                }
+            ],
+            "date": 1742295949707,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"client\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n  \"dev\": \"concurrently \\\"vite\\\" \\\"npm run tailwind:watch\\\"\",\n  \"build\": \"vite build\",\n  \"lint\": \"eslint .\",\n  \"preview\": \"vite preview\",\n  \"tailwind:watch\": \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\"\n  },\n  \"dependencies\": {\n    \"flowbite-react\": \"^0.10.2\",\n    \"react\": \"^19.0.0\",\n    \"react-dom\": \"^19.0.0\",\n    \"react-router-dom\": \"^7.3.0\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^9.21.0\",\n    \"@types/react\": \"^19.0.10\",\n    \"@types/react-dom\": \"^19.0.4\",\n    \"@vitejs/plugin-react-swc\": \"^3.8.0\",\n    \"autoprefixer\": \"^10.4.21\",\n    \"eslint\": \"^9.21.0\",\n    \"eslint-plugin-react-hooks\": \"^5.1.0\",\n    \"eslint-plugin-react-refresh\": \"^0.4.19\",\n    \"globals\": \"^15.15.0\",\n    \"postcss\": \"^8.5.3\",\n    \"tailwindcss\": \"^3.4.17\",\n    \"vite\": \"^6.2.0\"\n  }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "sourceFile": "Client/src/Components/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1742286297118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1742286414787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n export function Header(){\r\n-    \r\n+    return<div>\r\n+        Header\r\n+    </div>\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742286480561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+export function Header(){\r\n+    return(\r\n+        <Navbar>\r\n+            \r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742286496619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+export function Header(){\r\n+    return(\r\n+        <Navbar>\r\n+            Header\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742286554385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+export function Header(){\r\n+    return(\r\n+        <nav>\r\n+            Header\r\n+        </nav>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742286735914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+export function Header(){\r\n+    return(\r\n+        <nav class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class=''></span>\r\n+                Blog\r\n+            </Link>\r\n+            Header\r\n+        </nav>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742286804128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+export function Header(){\r\n+    return(\r\n+        <nav class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500'>ArkFusion</span>\r\n+                Blog\r\n+            </Link>\r\n+            Header\r\n+        </nav>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742287395265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Link } from \"react-router-dom\"\r\n export function Header(){\r\n     return(\r\n         <nav class='border-b-2'>\r\n             <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n"
+                },
+                {
+                    "date": 1742294779668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500'>ArkFusion</span>\r\n+                Blog\r\n+            </Link>\r\n+            Header\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742294806942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500'>ArkFusion</span>\r\n+                Blog\r\n+            </Link>\r\n+            Header\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742296118801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,74 +11,5 @@\n             Header\r\n         </Navbar>\r\n     )\r\n \r\n-}\n-import { Link } from \"react-router-dom\"\r\n-export function Header(){\r\n-    return(\r\n-        <Navbar class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500'>ArkFusion</span>\r\n-                Blog\r\n-            </Link>\r\n-            Header\r\n-        </Navbar>\r\n-    )\r\n-\r\n-}\n-import { Link } from \"react-router-dom\"\r\n-export function Header(){\r\n-    return(\r\n-        <nav class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500'>ArkFusion</span>\r\n-                Blog\r\n-            </Link>\r\n-            Header\r\n-        </nav>\r\n-    )\r\n-\r\n-}\n-export function Header(){\r\n-    return(\r\n-        <nav class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class=''></span>\r\n-                Blog\r\n-            </Link>\r\n-            Header\r\n-        </nav>\r\n-    )\r\n-\r\n-}\n-export function Header(){\r\n-    return(\r\n-        <nav>\r\n-            Header\r\n-        </nav>\r\n-    )\r\n-\r\n-}\n-export function Header(){\r\n-    return(\r\n-        <Navbar>\r\n-            Header\r\n-        </Navbar>\r\n-    )\r\n-\r\n-}\n-export function Header(){\r\n-    return(\r\n-        <Navbar>\r\n-            \r\n-        </Navbar>\r\n-    )\r\n-\r\n-}\n-export function Header(){\r\n-    return<div>\r\n-        Header\r\n-    </div>\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308254591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n                 <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n                 via-purple-500 to-pink-500'>ArkFusion</span>\r\n                 Blog\r\n             </Link>\r\n-            Header\r\n         </Navbar>\r\n     )\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308326406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return(\r\n         <Navbar class='border-b-2'>\r\n             <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n                 <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500'>ArkFusion</span>\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion</span>\r\n                 Blog\r\n             </Link>\r\n         </Navbar>\r\n     )\r\n"
+                },
+                {
+                    "date": 1742308382027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n+                Blog\r\n+            </Link>\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308430926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='px-4 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n+                Blog\r\n+            </Link>\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308439243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export function Header(){\r\n     return(\r\n         <Navbar class='border-b-2'>\r\n             <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                <span class='m-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n                 via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n                 Blog\r\n             </Link>\r\n         </Navbar>\r\n"
+                },
+                {
+                    "date": 1742308446348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='mt-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n+                Blog\r\n+            </Link>\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308554732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,54 +3,12 @@\n export function Header(){\r\n     return(\r\n         <Navbar class='border-b-2'>\r\n             <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='mt-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n-                Blog\r\n-            </Link>\r\n-        </Navbar>\r\n-    )\r\n-\r\n-}\n-import { Link } from \"react-router-dom\"\r\n-import {Navbar} from 'flowbite-react';\r\n-export function Header(){\r\n-    return(\r\n-        <Navbar class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='px-4 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n-                Blog\r\n-            </Link>\r\n-        </Navbar>\r\n-    )\r\n-\r\n-}\n-import { Link } from \"react-router-dom\"\r\n-import {Navbar} from 'flowbite-react';\r\n-export function Header(){\r\n-    return(\r\n-        <Navbar class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n                 <span class='m-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n                 via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n                 Blog\r\n             </Link>\r\n         </Navbar>\r\n     )\r\n \r\n-}\n-import { Link } from \"react-router-dom\"\r\n-import {Navbar} from 'flowbite-react';\r\n-export function Header(){\r\n-    return(\r\n-        <Navbar class='border-b-2'>\r\n-            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n-                <span class='px-2 py-1 bg-gradient-to-r from-indigo-500\r\n-                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion</span>\r\n-                Blog\r\n-            </Link>\r\n-        </Navbar>\r\n-    )\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308561569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2 p-1'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='m-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n+                Blog\r\n+            </Link>\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742308567179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Link } from \"react-router-dom\"\r\n import {Navbar} from 'flowbite-react';\r\n export function Header(){\r\n     return(\r\n-        <Navbar class='border-b-2 p-2'>\r\n+        <Navbar class='border-b-2 p-1'>\r\n             <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n                 <span class='m-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n                 via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n                 Blog\r\n"
+                },
+                {
+                    "date": 1742308586894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Link } from \"react-router-dom\"\r\n+import {Navbar} from 'flowbite-react';\r\n+export function Header(){\r\n+    return(\r\n+        <Navbar class='border-b-2 p-1'>\r\n+            <Link to=\"/\" class='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>\r\n+                <span class='m-1 px-2 py-1 bg-gradient-to-r from-indigo-500\r\n+                via-purple-500 to-pink-500 rounded-lg text-white'>ArkFusion's</span>\r\n+                Blog\r\n+            </Link>\r\n+        </Navbar>\r\n+    )\r\n+\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1742286297118,
+            "name": "Commit-0",
+            "content": "export function Header(){\r\n    \r\n}"
+        }
+    ]
+}
