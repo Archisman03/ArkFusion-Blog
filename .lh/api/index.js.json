@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1742324688801,
@@ -28,6 +28,54 @@
                 {
                     "date": 1742324777975,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express')\r\n \r\n const app = express();\r\n \r\n-app.get(3000, () => {\r\n+app.listen(3000, () => {\r\n     console.log('Server is running on port 3000')\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742714942674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n const express = require('express')\r\n-\r\n+const mongoose = require('mongoose')\r\n+const env = require('dotenv');\r\n const app = express();\r\n \r\n app.listen(3000, () => {\r\n     console.log('Server is running on port 3000')\r\n"
+                },
+                {
+                    "date": 1742715119517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n const express = require('express')\r\n const mongoose = require('mongoose')\r\n const env = require('dotenv');\r\n+\r\n+mongoose.connect(process.env.MONGO_URL)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\")\r\n+    })\r\n const app = express();\r\n \r\n app.listen(3000, () => {\r\n     console.log('Server is running on port 3000')\r\n"
+                },
+                {
+                    "date": 1742715140865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n const env = require('dotenv');\r\n \r\n mongoose.connect(process.env.MONGO_URL)\r\n     .then(()=>{\r\n-        console.log(\"DataBase is connected\")\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err)\r\n     })\r\n const app = express();\r\n \r\n app.listen(3000, () => {\r\n"
+                },
+                {
+                    "date": 1742715146549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const env = require('dotenv');\r\n+\r\n+mongoose.connect(process.env.MONGO_URL)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715185870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const env = require('dotenv');\r\n+\r\n+mongoose.connect(process.env.MONGO)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715323081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const env = require('dotenv');\r\n+\r\n+mongoose.connect('mongodb+srv://admin:Arka0303@cluster0.2xc4q.mongodb.net/')\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715362970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+mongoose.connect('mongodb+srv://admin:Arka0303@cluster0.2xc4q.mongodb.net/')\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715386043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+mongoose.connect('mongodb+srv://admin:Arka0303@cluster0.2xc4q.mongodb.net/')\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715401597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+mongoose.connect(process.env.MONGO)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715429014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+mongoose.connect(process.env.MONGO_URL)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715570084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+dotenv.config();  // Load environment variables\r\n+\r\n+mongoose.connect(process.env.MONGO_URL)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1742715575220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+const express = require('express')\r\n+const mongoose = require('mongoose')\r\n+const dotenv = require('dotenv');\r\n+\r\n+dotenv.config();  // Load environment variables\r\n+\r\n+mongoose.connect(process.env.MONGO_URL)\r\n+    .then(()=>{\r\n+        console.log(\"DataBase is connected\");\r\n+    }).catch((err) =>{\r\n+        console.log(err);\r\n+    })\r\n+\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3000, () => {\r\n+    console.log('Server is running on port 3000')\r\n+})\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1742324688801,
