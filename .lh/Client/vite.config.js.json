@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1742295004791,
@@ -12,6 +12,10 @@
                 {
                     "date": 1742312567499,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n-// https://vite.dev/config/\n+import tailwindcss from '@tailwindcss/vite'\n export default defineConfig({\n-  plugins: [react()],\n+  plugins: [react(),\n+    tailwindcss()\n+  ],\n })\n"
+                },
+                {
+                    "date": 1743234722421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,16 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n import tailwindcss from '@tailwindcss/vite'\n export default defineConfig({\n+  server:{\n+    proxy:{\n+      '/api':{\n+        target:'http://localhost:3000',\n+        secure: false,\n+      }\n+    }\n+  },\n   plugins: [react(),\n     tailwindcss()\n   ],\n })\n"
                 }
             ],
             "date": 1742295004791,
