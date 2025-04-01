@@ -33,7 +33,7 @@ export function SignUp() {
                 headers: { 'content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
-            const data = await res.json();
+            const data = await response.json();
             console.log("Signup Successful:", data);
             // alert("Signup Successful!")
             if (data.success === false) {
@@ -47,7 +47,7 @@ export function SignUp() {
                 navigate('/sign-in');
             }
         } catch (error) {
-            setErrorMessage("Error:", error.message);
+            setErrorMessage(`Error: ${err.message}`);
             // alert("Signup Failed. Please try again.");
             setLoading(false);
             

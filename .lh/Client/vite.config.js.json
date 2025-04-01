@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1742295004791,
@@ -36,6 +36,26 @@
                 {
                     "date": 1743451898060,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n import tailwindcss from '@tailwindcss/vite'\n-/** @type {import('tailwindcss').Config} */\n+\n export default defineConfig({\n   server:{\n     proxy:{\n       '/api':{\n@@ -10,16 +10,8 @@\n         secure: false,\n       }\n     }\n   },\n-  content: [\n-    \"./index.html\",\n-    \"./src/**/*.{js,ts,jsx,tsx}\",\n-    \"node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}\",\n+  plugins: [react(),\n+    tailwindcss()\n   ],\n-  theme: {\n-    extend: {},\n-  },\n-  plugins: [react(),\n-    tailwindcss(),\n-    require(\"flowbite/plugin\")],\n })\n"
+                },
+                {
+                    "date": 1743527230733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import { defineConfig } from 'vite'\n import react from '@vitejs/plugin-react-swc'\n import tailwindcss from '@tailwindcss/vite'\n-\n export default defineConfig({\n   server:{\n     proxy:{\n       '/api':{\n"
+                },
+                {
+                    "date": 1743527563078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   server:{\n     proxy:{\n       '/api':{\n         target:'http://localhost:3000',\n+        changeOrigin: true, \n         secure: false,\n       }\n     }\n   },\n"
+                },
+                {
+                    "date": 1743527738368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     proxy:{\n       '/api':{\n         target:'http://localhost:3000',\n         changeOrigin: true, \n+        rewrite: (path) => path.replace(/^\\/api/, ''),  // ✅ Ensures correct API path\n         secure: false,\n       }\n     }\n   },\n"
+                },
+                {
+                    "date": 1743527812700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import { defineConfig } from 'vite'\n+import react from '@vitejs/plugin-react-swc'\n+import tailwindcss from '@tailwindcss/vite'\n+export default defineConfig({\n+  server:{\n+    proxy:{\n+      '/api':{\n+        target:'http://localhost:3000',\n+        changeOrigin: true, \n+        secure: false,\n+      }\n+    }\n+  },\n+  plugins: [react(),\n+    tailwindcss()\n+  ],\n+})\n"
+                },
+                {
+                    "date": 1743527979124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import { defineConfig } from 'vite'\n+import react from '@vitejs/plugin-react-swc'\n+import tailwindcss from '@tailwindcss/vite'\n+export default defineConfig({\n+  server:{\n+    proxy:{\n+      '/api':{\n+        target:'http://localhost:3000',\n+        changeOrigin: true, \n+        secure: false,\n+      }\n+    }\n+  },\n+  plugins: [react(),\n+    tailwindcss()\n+  ],\n+})\n"
                 }
             ],
             "date": 1742295004791,

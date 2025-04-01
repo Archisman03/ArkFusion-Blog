@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1742272946387,
@@ -56,6 +56,10 @@
                 {
                     "date": 1743449759193,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { Dashboard } from './Pages/Dashboard'\n import { Projects } from './Pages/Projects'\n import { NotFound } from './Pages/NotFound'\n import { Header } from './Components/Header'\n+import { Footer } from './Components/Footer'\n \n function App() {\n \n   return (\n@@ -22,8 +23,9 @@\n         <Route path='/dashboard' element={<Dashboard />} />\n         <Route path='/projects' element={<Projects />} />\n         <Route path=\"*\" element={<NotFound />} />\n       </Routes>\n+      <Footer />\n     </BrowserRouter>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1743525950518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,26 @@\n import { useState } from 'react'\n import { BrowserRouter, Routes, Route } from 'react-router-dom'\n import { Home } from './Pages/Home'\n import { About } from './Pages/About'\n-import { Signin } from './Pages/Signin'\n+import { SignIn } from './Pages/Signin'\n import { SignUp } from './Pages/SignUp'\n import { Dashboard } from './Pages/Dashboard'\n import { Projects } from './Pages/Projects'\n import { NotFound } from './Pages/NotFound'\n import { Header } from './Components/Header'\n import { Footer } from './Components/Footer'\n \n+\n function App() {\n \n   return (\n     <BrowserRouter>\n       <Header />\n       <Routes>\n         <Route index element={<Home />} />\n         <Route path='/about' element={<About />} />\n-        <Route path='/sign-in' element={<Signin />} />\n+        <Route path='/sign-in' element={<SignIn />} />\n         <Route path='/sign-up' element={<SignUp />} />\n         <Route path='/dashboard' element={<Dashboard />} />\n         <Route path='/projects' element={<Projects />} />\n         <Route path=\"*\" element={<NotFound />} />\n"
                 }
             ],
             "date": 1742272946387,
