@@ -2,6 +2,8 @@ const { z } = require('zod');
 const { User } = require('../models/user.model');
 const bcrypt = require('bcrypt');
 const { errorHandler } = require('../utils/error');
+const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
 
 
 const signUp = async (req, res, next) => {
@@ -61,10 +63,48 @@ const signUp = async (req, res, next) => {
     }
 }
 
-module.exports = { signUp };
 /**
  * If you just want to insert a document quickly → Use User.create().
 
     If you need to modify the user before saving (e.g., hashing passwords, setting timestamps, adding defaults manually) → Use new User() + .save().
     Mane new user() likhar por ar save age edit korte chaile korte parbo
- */
+*/
+
+const signIn = async (req, res, next)=>{
+    const {email, password} = req.body;
+    if(!email || !password || email==='' || password ===''){
+        next(errorHandler(400,'All fields are required to filled'));
+    }
+    try{
+        const validUser= await User.findOne({
+            email:email
+        })
+
+        if (!validUser) {
+            return next(errorHandler(404, 'INVALID USER'));
+        }
+
+        // Compare password securely
+        const pwd = await bcrypt.compare(password, validUser.password);
+        if(!pwd)
+           return next(errorHandler(404,'Wrong Password'));
+
+        //Generating jwt token
+        const token = jwt.sign({id: validUser._id}, process.env.JWT_Secret);
+        
+        //in response password will also get displayed so to hide it:
+        const {password: pass, ...rest} = validUser._doc;
+
+        res.status(200)
+        // C:\Users\ARCHISMAN GOSWAMI\OneDrive\Desktop\ArkFusion-Blog\Notes\cookies\3.png 
+        .cookie('access_token', token, {
+            httpOnly: true,
+        })
+        .json(rest) //instead sending .json(validUser) we will send rest where password is being hided
+
+    }catch(err){
+        next(errorHandler(err.statusCode, err.message));
+    }
+    
+}
+module.exports ={signUp, signIn};

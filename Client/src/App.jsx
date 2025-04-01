@@ -8,6 +8,7 @@ import { Dashboard } from './Pages/Dashboard'
 import { Projects } from './Pages/Projects'
 import { NotFound } from './Pages/NotFound'
 import { Header } from './Components/Header'
+import { Footer } from './Components/Footer'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

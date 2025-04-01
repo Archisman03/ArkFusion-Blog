@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1742312580951,
@@ -20,6 +20,26 @@
                 {
                     "date": 1742318197601,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,1 @@\n-@import \"tailwindcss\";\r\n-@import \"flowbite/src/themes/default\";\r\n-@plugin \"flowbite/plugin\";\r\n-@source \"../node_modules/flowbite\";\n\\ No newline at end of file\n+@import \"tailwindcss\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1743449883278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-@import \"tailwindcss\";\n\\ No newline at end of file\n+@import \"tailwindcss\";\r\n+@import \"flowbite/src/themes/default\";\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1743450118862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n @import \"tailwindcss\";\r\n-@import \"flowbite/src/themes/default\";\n\\ No newline at end of file\n+@import 'flowbite/dist/flowbite.css';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1743450404707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n @import \"tailwindcss\";\r\n-@import 'flowbite/dist/flowbite.css';\n\\ No newline at end of file\n+/* @import 'flowbite/dist/flowbite.css'; */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1743450883668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n @import \"tailwindcss\";\r\n-/* @import 'flowbite/dist/flowbite.css'; */\n\\ No newline at end of file\n+@import 'flowbite/dist/flowbite.css';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1743451928716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n-@import \"tailwindcss\";\r\n-@import 'flowbite/dist/flowbite.css';\n\\ No newline at end of file\n+@import \"tailwindcss\";\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1742312580951,
