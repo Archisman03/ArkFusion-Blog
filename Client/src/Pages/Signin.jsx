@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import {useDispatch, useSelector} from 'react-redux';
+import { signInStart, signInSuccess, signInFailure } from '../Redux/user/userSlice';
+// VVI see the difference in change when we use redux toolkit
 export function SignIn() {
     const [formData, setFormData] = useState({});
     // FOr Error 
-    const [errorMessage, setErrorMessage] = useState(null);
-    const [loading, setLoading] = useState(false);
+    // const [errorMessage, setErrorMessage] = useState(null);
+    // const [loading, setLoading] = useState(false);
+    //this two are not needed now as we are using redux
+    const {loading, error: errorMessage } = useSelector((state) => state.user); 
 
     //for navigation
     const navigate = useNavigate();
+    //initializing redux functions:
+    const dispatch = useDispatch();
 
     // Change in inputs
     const handleChange = (e) => {
@@ -16,18 +22,26 @@ export function SignIn() {
     }
     // console.log(formData);
 
+
     //SUbmiting
     async function handleSubmit(e) {
         e.preventDefault(); //✅ Prevents page reload when we click on sign up button
 
         //if any filled in the form is not filledUp
         if (!formData.email || !formData.password) {
-            return setErrorMessage('Please fill out all required filleds');
+            // return setErrorMessage('Please fill out all required filleds');
+            //or using redux toolkit:
+            dispatch(signInFailure('Please fill out all required filleds'));
         }
 
         try {
             // start of fetching loading starts
-            setLoading(true);
+        /*  setLoading(true);
+            setErrorMessage(null); 
+        */
+            //or using redux toolikit we written the logic for setLoading and setErrorMessage in signInStart
+            dispatch(signInStart());
+
             const response = await fetch('/api/auth/signin', {
                 method: 'POST',
                 headers: { 'content-Type': 'application/json' },
@@ -37,19 +51,25 @@ export function SignIn() {
             console.log("Signup Successful:", data);
             // alert("Signup Successful!")
             if (data.success === false) {
-                return setErrorMessage(data.message);
+                // return setErrorMessage(data.message);
+                //or using redux:
+                return dispatch(signInFailure(data.message));
             }
             //fetching ended LOADING STOPS
-            setLoading(false)
+            // setLoading(false) //now we don't need this as redux is been used and the above signInFailure function will setLoading to false
 
             //navigating to sign-in page when sign-up is successfull
             if(response.ok){
+                dispatch(signInSuccess(data));
                 navigate('/');
             }
         } catch (err) {
-            setErrorMessage(`Error: ${err.message}`);
+            // setErrorMessage(`Error: ${err.message}`);
             // alert("Signup Failed. Please try again.");
-            setLoading(false); 
+            // setLoading(false); 
+
+            //or using redux toolkit:
+            dispatch(signInFailure(err.message));
         }
     }
 
